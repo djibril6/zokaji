@@ -1,0 +1,36 @@
+<ion-split-pane>
+
+        <!-- logged out menu -->
+        <ion-menu id="loggedOutMenu" [content]="content">
+      
+          <ion-header>
+            <ion-toolbar color="danger">
+              <ion-title>Menu</ion-title>
+            </ion-toolbar>
+          </ion-header>
+      
+          <ion-content class="outer-content">
+      
+            <ion-list>
+                <ion-grid>
+                    <ion-row *ngFor="let p of appPagesFr">
+                        <ion-col col-3>
+                            <button ion-button icon-only color="trans" (click)="lireAudio(p)">
+                                <ion-icon [name]="p.icon" color="primary"></ion-icon>
+                            </button>
+                        </ion-col>
+                        <ion-col col-9>
+                            <button ion-item (click)="openPage(p)">
+                              {{ p.title }}
+                            </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-list>
+          </ion-content>
+      
+        </ion-menu>
+    
+        <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>
+      
+</ion-split-pane>      

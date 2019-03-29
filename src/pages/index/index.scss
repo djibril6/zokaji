@@ -1,0 +1,58 @@
+page-index {
+    .body {
+        width: 100%;
+        height: 100%;
+        background: url('../../assets/img/conseilPage/conseilFond.jpg');
+        text-align: center;
+        overflow: hidden;
+    }
+    .conteneur {
+        width: 100%;
+        height: 65%;
+        border-radius: 4px 4px;
+    }
+
+    .slides {
+        height: 80%;
+    }
+
+    .slide {
+        height: 100%;
+    }
+
+    .div {
+        height: 100%;
+    }
+
+    .conteneur video {
+        width: 100%;
+        height: 50%;
+        margin-top: -3px;
+    }
+
+    .conteneur img {
+        width: 100%;
+        height: 50%;
+        margin-top: -0px;
+    }
+
+    .conteneur .title {
+        font-size: 1.3em;
+        text-align: center;
+        color: #ce4c93;
+    }
+
+    a {
+        color: #ce4c93;
+    }
+
+    .grid {
+        margin-top: 0px;
+    }
+
+    #patenaires {
+        width: 97%;
+        height: 30%;
+        border-radius: 4px 4px;
+    }
+}

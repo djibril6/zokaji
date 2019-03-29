@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Langue</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="body">
+    <img src="assets/img/index.jpg">
+
+    <button ion-button id="signe" class="btn" color="trans" (click)="choisirLangue('si')">
+    
+    </button>
+
+    <button ion-button icon-only id="haoussa" class="btn" color="light" (click)="joue('ha')">
+      <ion-icon [name]="actionha" color="primary2"></ion-icon>
+    </button>
+    <button ion-button id="haoussabtn" class="btn" color="trans" (click)="choisirLangue('ha')">
+      
+    </button>
+
+    <button ion-button icon-only id="za" class="btn" color="light" (click)="joue('za')">
+      <ion-icon [name]="actionza" color="primary"></ion-icon>
+    </button>
+    <button ion-button id="zabtn" class="btn" color="trans" (click)="choisirLangue('za')">
+      
+    </button>
+
+    <button ion-button icon-only id="fr" class="btn" color="light" (click)="joue('fr')">
+      <ion-icon [name]="actionfr" color="dark"></ion-icon>
+    </button>
+    <button ion-button id="frbtn" class="btn" color="trans" (click)="choisirLangue('fr')">
+      
+    </button>
+    <button ion-button round id="forum" (click)="allerAuForum()">Aller au forum</button>
+  </div>
+</ion-content>

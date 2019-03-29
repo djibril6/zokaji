@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>{{ titre }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content id="body">
+  <div *ngIf="enligne === 'false'">
+  <ion-card class="conteneur">
+
+    <video [src]="conseilVideo1" controls></video>
+
+    <ion-card-content>
+      <p>{{ titreVideo1 }}</p>
+    </ion-card-content>
+  
+  </ion-card>
+
+  <ion-card class="conteneur">
+
+      <video [src]="conseilVideo2" controls></video>
+  
+      <ion-card-content>
+        <p>{{ titreVideo2 }}</p>
+      </ion-card-content>
+    
+    </ion-card>
+  </div>
+
+  <div *ngIf="enligne === 'true'"> <!--  Contenu En ligne -->
+    <ion-card class="conteneur" *ngFor="let media of mediaConseil">
+
+        <video [src]="media.cheminMedia" controls></video>
+    
+        <ion-card-content>
+          <p>{{ media.titreMedia }}</p>
+        </ion-card-content>
+        
+      
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+
+    <ion-navbar no-border-bottom>
+      <button ion-button menuToggle color="danger">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+      <ion-segment [(ngModel)]="cn">
+        <ion-segment-button value="sans">
+              Hors ligne
+        </ion-segment-button>
+        <ion-segment-button value="avec">
+              en ligne
+        </ion-segment-button>
+      </ion-segment>
+    </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content padding id="body" [ngSwitch]="cn">
+  <div *ngSwitchCase="'sans'">
+    <button ion-button full color="danger" (click)="voirConseil('systemeDeReproduction','Le Système de reproduction')">Le Système de reproduction</button>
+    <button ion-button full color="danger" (click)="voirConseil('grossesseEtProcreation','La grossesse et la Procréation')">La grossesse et la Procréation</button>
+    <button ion-button full color="danger" (click)="voirConseil('planificationFamiliale', 'La Planification familiale')">La Planification familiale</button>
+    <button ion-button full color="danger" (click)="voirConseil('santeMaternelle', 'La santé maternelle')">La santé maternelle</button>
+    <button ion-button full color="danger" (click)="voirConseil('MSTetIST','Les MST et IST')">Les MST et IST</button>
+    <button ion-button full color="danger" (click)="voirConseil('avortement', 'L’avortement')">L’avortement</button>
+    <button ion-button full color="danger" (click)="voirConseil('excision','L’excision/mutilation génitale
+    féminine')">L’excision/mutilation génitale</button>
+    <button ion-button full color="danger" (click)="voirConseil('adolescentsEtAdultes' ,'Adolescents et Jeunes adultes')">Adolescents et Jeunes adultes</button>
+    <button ion-button full color="danger" (click)="voirConseil('glossaire', 'Glossaire')">Glossaire</button>
+  </div>
+  <div *ngSwitchCase="'avec'">
+    <button ion-button full color="primary" *ngFor="let rubrique of gl.rubriqueConseil" (click)="voirConseil(rubrique.nomRubrique, rubrique.nomRubrique, 'true')">{{ rubrique.nomRubrique }}</button>
+  </div>
+</ion-content>

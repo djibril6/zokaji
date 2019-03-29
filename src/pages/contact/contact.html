@@ -1,0 +1,34 @@
+<ion-header>
+
+    <ion-navbar>
+      <button ion-button menuToggle color="danger">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Suggestion</ion-title>
+    </ion-navbar>
+  
+</ion-header>
+
+<ion-content id="body">
+
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Ionic Logo">
+        </div>
+        
+            <form #submitForm="ngForm" novalidate (ngSubmit)="envoyer(submitForm)">
+                <ion-list no-lines>
+                    <ion-item>
+                        <ion-label stacked color="danger">Entrez votre message ci-dessous</ion-label>
+                        <ion-textarea [(ngModel)]="supportMessage" name="supportQuestion" #supportQuestion="ngModel" rows="6" required></ion-textarea>
+                    </ion-item>
+                </ion-list>
+        
+                <p ion-text [hidden]="supportQuestion.valid || submitted === false" color="danger" padding-left>
+                    Champ obligatoire
+                </p>
+        
+                <div padding>
+                    <button ion-button block type="submit" color="secondary">Envoyer</button>
+                </div>
+            </form>
+</ion-content>
